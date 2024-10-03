@@ -1,0 +1,202 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif; /* Основной шрифт */    background-color: #464646;
+    background-image: url("../img/background.webp");
+    background-size: cover;
+    background-position: center;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота - 100% от высоты экрана */
+}
+
+.container p {
+    font-size: 3rem;
+}
+.main-content {
+    flex: 1; /* Основной контент занимает все доступное пространство */
+}
+
+/* Шапка сайта */
+.header {
+    background-image: url("../img/header.webp");
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3); /* Тень снизу */
+    
+        
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Темная маска для текста */
+    z-index: -1;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Основной контент */
+.main-content {
+    padding: 20px 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.featured-articles {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.featured-articles h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.articles-grid {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переходить на новую строку */
+    gap: 20px; /* Отступы между карточками */
+    width: 100%;
+}
+
+.article {
+    flex: 1 1 calc(33.333% - 20px); /* Каждая карточка занимает треть ширины с учетом отступа */
+    background-size: cover; /* Изображение покрывает всю область карточки */
+    background-position: center; /* Центрирует изображение */
+    height: 300px; /* Высота карточки */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #ffffff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+.article:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.article .content {
+    background: rgba(0, 0, 0, 0.7); /* Темный полупрозрачный слой для читаемости текста */
+    padding: 30px;
+    width: 100%;
+}
+
+.article h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.article p {
+    font-size: 2 rem;
+    margin-bottom: 15px;
+}
+
+.article a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    background: #ffffff2d;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.article a:hover {
+    background: #4747473f;
+    color: #ffffff;
+}
+
+
+/* Подвал */
+.footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Распределяет элементы навигации по всей ширине */
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(to bottom, rgba(71, 71, 71, 0.0), rgba(71, 71, 71, 1.0)); /* Сверху полностью прозрачный, внизу полностью непрозрачный */
+    
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    display: block;
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background: linear-gradient(to bottom, rgba(71, 71, 71, 0), rgb(65, 65, 65)); /* Сверху полностью прозрачный, внизу полностью непрозрачный */
+    
+}
